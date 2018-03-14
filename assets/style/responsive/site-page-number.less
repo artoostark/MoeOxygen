@@ -1,0 +1,80 @@
+@charset "UTF-8";
+//引入初始化样式
+@import "../apc.less";
+
+/*-------------------
+   响应式 - 页码
+--------------------*/
+
+/*模态宽度 - 移动端(小于767分辨率)*/
+@media only screen and (max-width: 767px) {
+  main .apc-main .ui .site-page-number {
+    display: none;
+  }
+
+  main .apc-main .ui .site-page-nav-mobile {
+    width: 100%;
+  }
+
+  main .apc-main .ui .site-page-nav-mobile .prev {
+    color: #fff;
+    background-color: #e9e9e9;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  main .apc-main .ui .site-page-nav-mobile .nav {
+    background-color: transparent;
+    width: 25%;
+  }
+
+  main .apc-main .ui .site-page-nav-mobile .next {
+    color: #5f3c00;
+    background-color: @main-color;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  main .apc-main .ui .site-page-nav-mobile .prev:hover,
+  main .apc-main .ui .site-page-nav-mobile .prev:focus,
+  main .apc-main .ui .site-page-nav-mobile .prev:active,
+  main .apc-main .ui .site-page-nav-mobile .prev:visited,
+  main .apc-main .ui .site-page-nav-mobile .next:hover,
+  main .apc-main .ui .site-page-nav-mobile .next:focus,
+  main .apc-main .ui .site-page-nav-mobile .next:active,
+  main .apc-main .ui .site-page-nav-mobile .next:visited {
+    background-color: @main-hover-color;
+  }
+
+}
+
+/*模态宽度 - 平板电脑(大于767分辨率)*/
+@media only screen and (min-width: 768px) {
+  main .apc-main .ui .site-page-nav-mobile {
+    display: none;
+  }
+
+  main .apc-main .ui .site-page-number {
+    margin-bottom: 2.5rem;
+  }
+}
+
+/*模态宽度 - 小型显示器(大于992分辨率)*/
+@media only screen and (min-width: 992px) {
+
+}
+
+/*模态宽度 - 大型显示器(大于1200分辨率)*/
+@media only screen and (min-width: 1200px) {
+
+}
+
+/*模态宽度 - 超级大型显示器(大于1920分辨率)*/
+@media only screen and (min-width: 1920px) {
+
+}
+
+/*模态宽度 - 小型显示器(小于991分辨率)*/
+@media only screen and (max-width: 991px) {
+
+}

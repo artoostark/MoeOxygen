@@ -1,0 +1,72 @@
+@charset "UTF-8";
+//引入初始化样式
+@import (reference) "apc.less";
+
+//文章导航
+main .apc-main .single-nav {
+  position: relative;
+  width: 100%;
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+}
+
+main .apc-main .single-nav .ui.card {
+  width: 48%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+main .apc-main .single-nav .ui.card .image {
+  padding: 0.35714285714285715rem;
+  background-color: transparent;
+  position: relative;
+}
+
+main .apc-main .single-nav .ui.card .image button {
+  position: absolute;
+  top: 1.7857142857142858rem;
+  background-color: rgba(0,0,0,0.5);
+}
+
+main .apc-main .single-nav .ui.card .image button a {
+  color: #fff;
+  font-size: @two-font-size;
+}
+
+main .apc-main .single-nav .ui.card .image button.single-nav-button-left {
+  left: 1.35714285714285715rem;
+}
+
+main .apc-main .single-nav .ui.card .image button.single-nav-button-right {
+  right: 1.35714285714285715rem;
+}
+
+main .apc-main .single-nav .ui.card .content {
+  border-top: none;
+  padding-top: 0;
+}
+
+main .apc-main .single-nav .ui.card .content .title {
+  margin: 0.35714285714285715rem auto;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+main .apc-main .single-nav .ui.card .content .title a {
+  font-size: @two-font-size;
+  color: #000;
+}
+
+main .apc-main .single-nav .ui.card .content .description a {
+  font-size: @main-font-size;
+  color: @main-font-color;
+}
+
+main .apc-main .single-nav .single-nav-left {
+ margin-right: 4%;
+}

@@ -1,0 +1,24 @@
+@charset "UTF-8";
+//引入初始化样式
+@import (reference) "apc.less";
+
+//回到顶部
+body .apc-fade {
+  opacity: 1;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 1.0714285714285714rem;
+  right: 5%;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
+  padding: 0;
+  margin: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  cursor: pointer;
+}
