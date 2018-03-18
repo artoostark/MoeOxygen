@@ -1,7 +1,16 @@
 <div class="apc-sidebar four wide column">
   <div class="ui site-nav">
     <!--站点导航-->
-    <ul class="site-nav-ul">
+    <?php
+    wp_nav_menu(
+        array(
+            'theme_location' => 'cates-nav-list',
+            'container' => false,
+            'menu_class' => 'site-nav-ul',
+        )
+    );
+    ?>
+    <!-- <ul class="site-nav-ul">
       <?php
         $categories = get_categories( array(
             'orderby' => 'name',
@@ -49,7 +58,7 @@
           <?php endif; ?>
         </li>
       <?php endforeach; ?>
-    </ul><!--end 站点导航-->
+    </ul> --><!--end 站点导航-->
 
   </div>
   <div class="ui site-ad" style="display:none;">
@@ -62,14 +71,19 @@
       <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAPCAYAAAAGRPQsAAABb0lEQVQ4jZXTsUtWYRTH8c/N96UgRILIoiVBSCGKBgdTIXBpahDcnEKQFwQh/wANgmoP33BIFG2wIQgnJWjIwUEQpEhESXESh6BEROM2vM+Vh4tX9JnO+Z3nfM859zk3Scdc9NTh34lXSU/MSwUJtzCLn+iK9GEcYB138klFsGn04i4+4jIa8QplNONlPqlUALsX2Y14GIDlSG87b2cbOf8Qv3LaThHsBp7jSfBHcRzsJaxgC+NBO8YbUE26VJN2SMJr/kBruPgME2jBA8xhP8QStfH2sImRUBgeJemYEo6ibhfRGexr6Ed3AH7DDHZD/Dcagj1ZCi2noWo8+mO1l7weFerBi1BgFlei2P0ssRqJb9EUxotB2alXW51WfIj0iWw1BvEef7GG17h6Cig7ZfRhAF+wq5IuZLAUy9Hlm2eA4g6PVNKZTCjas+/ngH3NC0Wwd1g9AzSFT3mx6Hf6gw4M4Sluq32Gz5jH9mlJ/wG1XEoIpPj4MQAAAABJRU5ErkJggg=="/>
       <span>标签</span>
     </div>
-    <?php
-    $tags = wp_tag_cloud(array(
-        "format" => "array"
-    ));
-    var_dump($tags);
-    ?>
+
     <div class="site-label-list">
-      <a class="ui red label two">音乐</a>
+        <?php
+        wp_tag_cloud(array(
+            "format" => "flat",
+            "order" => "RAND",
+            "unit" => "px",
+            "smallest" => 12,
+            "largest" => 12,
+            "hide_empty"=> "0"
+        ));
+        ?>
+      <!-- <a class="ui red label two">音乐</a>
       <a class="ui orange label four">二次元世界</a>
       <a class="ui yellow label one">软件开发需要什么</a>
       <a class="ui olive label three">限时正版</a>
@@ -79,7 +93,7 @@
       <a class="ui violet label three">视频</a>
       <a class="ui purple label three">神器</a>
       <a class="ui pink label one">音乐</a>
-      <a class="ui brown label one big">音乐</a>
+      <a class="ui brown label one big">音乐</a> -->
     </div>
   </div>
   <div class="ui site-hot-posts" style="display:none;">

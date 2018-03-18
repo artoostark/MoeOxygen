@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <title>爱评测</title>
+  <meta charset="<?php bloginfo('charset') ?>">
+  <?php
+    if ( ! function_exists( '_wp_render_title_tag' ) ) {
+    	function theme_slug_render_title() {
+    ?>
+    <title><?php wp_title( '|', true, 'right' ); ?></title>
+    <?php
+    	}
+    	add_action( 'wp_head', 'theme_slug_render_title' );
+    }
+  ?>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <?php wp_head(); ?>
-  <!-- <link rel="stylesheet" type="text/css" href="assets/semantic/semantic.css">
-  <link rel="stylesheet" type="text/css" href="assets/style/style.css"> -->
 </head>
 <body>
 <header>
@@ -36,7 +43,7 @@
       </div>
     </div>
   </div>
-  <div class="header-content header-bg-img">
+  <div class="header-content header-bg-img" style="background-image:url(<?php header_image(); ?>);">
     <div class="header-logo ui container">
       <a class="nav-logo" href="#"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/logo.png"/></a>
     </div>

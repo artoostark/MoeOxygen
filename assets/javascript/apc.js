@@ -10,6 +10,7 @@
 			aLi[i].onmouseover = function () {
 				this.className = "liname";
 				this.querySelector(".site-nav-list") !== null ? this.querySelector(".site-nav-list").style.top = -44 + 'px' : '';
+				this.querySelector(".sub-menu") !== null ? this.querySelector(".sub-menu").style.top = -44 + 'px' : '';
 			};
 			aLi[i].onmouseout = function () {
 				this.className = "";

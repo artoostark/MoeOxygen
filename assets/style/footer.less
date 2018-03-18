@@ -23,9 +23,12 @@ footer .footer-info .ui.three .footer-left .mall {
   display: -ms-grid;
   display: -moz-grid;
   display: inline-grid;
+  margin: 0px;
+  padding-left: 0px;
 }
 
 footer .footer-info .ui.three .footer-left .mall a {
+  display: block;
   width: 2.142857142857143rem;
   height: 2.142857142857143rem;
   margin: 0.35714285714285715rem 0.7142857142857143rem;
@@ -51,6 +54,22 @@ footer .footer-info .ui.three .footer-center .about,
 footer .footer-info .ui.three .footer-center .cooperation,
 footer .footer-info .ui.three .footer-center .social {
   margin-bottom: 1.1428571428571428rem;
+}
+
+footer .footer-info .ui.three .footer-center div.links-container ul.links {
+    display: inline;
+    padding: 0px;
+}
+
+footer .footer-info .ui.three .footer-center div.links-container ul.links li {
+    display: inline-block;
+    // padding: 1rem;
+    width: 32%;
+}
+
+footer .footer-info .ui.three .footer-center div.links-container ul.links li a{
+    font-size: 0.8571428571428571rem;
+    color: #666;
 }
 
 footer .footer-info .ui.three .footer-center div h2 {
@@ -119,12 +138,20 @@ footer .footer-copyright .links {
   margin: 1.0714285714285714rem auto 0;
 }
 
-footer .footer-copyright .links a {
+footer .footer-copyright ul.links {
+  padding-left: 0px;
+}
+
+footer .footer-copyright ul.links li{
+  display: inline-block;
+}
+
+footer .footer-copyright ul.links li a {
   font-size: @main-font-size;
   color: #666;
   padding: 0 0.7142857142857143rem;
   border-right: 0.07142857142857142rem solid #666;
 }
-footer .footer-copyright .links a:last-child {
+footer .footer-copyright ul.links li:last-child a {
   border-right: none;
 }

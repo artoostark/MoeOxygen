@@ -2,70 +2,55 @@
   <div class="footer-info">
     <div class="ui container three column stackable grid">
       <div class="wide column footer-left">
-        <div class="mall">
-          <a href="#" target="_blank" rel="nofollow" title="好赞">
-              <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/good.png">
-          </a>
-          <a href="#" target="_blank" rel="nofollow" title="淘宝">
-              <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/taobao.png">
-          </a>
-          <a href="#" target="_blank" rel="nofollow" title="天猫">
-              <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/tianmao.png">
-          </a>
-          <a href="#" target="_blank" rel="nofollow" title="京东">
-              <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/jindong.png">
-          </a>
-          <a href="#" target="_blank" rel="nofollow" title="微店">
-              <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/weidian.png">
-          </a>
-        </div>
+        <?php
+        wp_nav_menu(
+            array(
+                'theme_location' => 'mall_link',
+                'container' => false,
+                'menu_class' => 'mall',
+            )
+        );
+        ?>
         <div class="text">
-          <p>早买早享受</p>
-          <p>晚买享折扣！</p>
+            <?php echo get_theme_mod( 'footer_desc', '<p>请到后台编辑</p>' ); ?>
         </div>
       </div>
       <div class="wide column footer-center">
-        <div class="about">
+        <div class="about links-container">
           <h2>爱评测</h2>
-          <div class="ui three column stackable grid">
-            <div class="wide column">
-              <a href="#" target="_blank" rel="nofollow">关于我们</a>
-            </div>
-            <div class="wide column">
-              <a href="#" target="_blank" rel="nofollow">联系我们</a>
-            </div>
-            <div class="wide column">
-              <a href="#" target="_blank" rel="nofollow">版权声明</a>
-            </div>
-          </div>
+          <?php
+          wp_nav_menu(
+              array(
+                  'theme_location' => 'about_link',
+                  'container' => false,
+                  'menu_class' => 'ui three column stackable grid links',
+              )
+          );
+          ?>
         </div>
-        <div class="cooperation">
+        <div class="cooperation links-container">
           <h2>广告合作</h2>
-          <div class="ui three column stackable grid">
-            <div class="wide column">
-              <a href="#" target="_blank" rel="nofollow">商务合作</a>
-            </div>
-            <div class="wide column">
-              <a href="#" target="_blank" rel="nofollow">加入我们</a>
-            </div>
-            <div class="wide column">
-              <a href="#" target="_blank" rel="nofollow">向我们投稿</a>
-            </div>
-          </div>
+          <?php
+          wp_nav_menu(
+              array(
+                  'theme_location' => 'cooperation_link',
+                  'container' => false,
+                  'menu_class' => 'ui three column stackable grid links',
+              )
+          );
+          ?>
         </div>
-        <div class="social">
+        <div class="social links-container">
           <h2>社交媒体</h2>
-          <div class="ui three column stackable grid">
-            <div class="wide column">
-              <a href="#" target="_blank" rel="nofollow">知乎专栏</a>
-            </div>
-            <div class="wide column">
-              <a href="#" target="_blank" rel="nofollow">B站专栏</a>
-            </div>
-            <div class="wide column">
-              <a href="#" target="_blank" rel="nofollow">蒸汽社区</a>
-            </div>
-          </div>
+          <?php
+          wp_nav_menu(
+              array(
+                  'theme_location' => 'social_link',
+                  'container' => false,
+                  'menu_class' => 'ui three column stackable grid links',
+              )
+          );
+          ?>
         </div>
       </div>
       <div class="wide column footer-right">
@@ -73,13 +58,14 @@
           <div class="wide column wechat">
             <h2>爱评测微信</h2>
             <div class="qr">
-              <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/qc.png" title="爱评测微信" alt="爱评测微信">
+
+              <img src="<?php echo get_theme_mod( 'wechat_qrcode', '' ); ?>" title="爱评测微信" alt="爱评测微信">
             </div>
           </div>
           <div class="wide column weibo">
             <h2>爱评测微博</h2>
             <div class="qr">
-              <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/qc.png" title="爱评测微博" alt="爱评测微博">
+              <img src="<?php echo get_theme_mod( 'weibo_qrcode', '' ); ?>" title="爱评测微博" alt="爱评测微博">
             </div>
           </div>
         </div>
@@ -90,8 +76,11 @@
     <div class="ui container two column stackable grid">
       <div class="wide column">
         <div class="footer-copyright-left">
-          Copyright © 2017 爱评测：<a href="#" target="_blank" rel="nofollow">鄂ICP备14018614号-2</a>
-          官方QQ群：<a href="#" target="_blank" rel="nofollow">123456789</a>
+          Copyright © <?php get_now_year(); ?> 爱评测：
+          <a href="http://www.miitbeian.gov.cn/" rel="external nofollow" target="_blank">
+              <?php echo get_option( 'zh_cn_l10n_icp_num' );?>
+          </a>
+          官方QQ群：<?php get_qq_group_select(); ?>
         </div>
       </div>
       <div class="wide column servers">
@@ -101,14 +90,15 @@
         <a href="#" target="_blank" rel="nofollow"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/youpaicloud.png"></a>
       </div>
     </div>
-    <div class="links">
-      <a href="#" target="_blank">优设网</a>
-      <a href="#" target="_blank">触乐网</a>
-      <a href="#" target="_blank">机核网</a>
-      <a href="#" target="_blank">Indienova</a>
-      <a href="#" target="_blank">IGN</a>
-      <a href="#" target="_blank">Polygon</a>
-    </div>
+    <?php
+    wp_nav_menu(
+        array(
+            'theme_location' => 'friendly_link',
+            'container' => false,
+            'menu_class' => 'links',
+        )
+    );
+    ?>
   </div>
   <div class="scroll-to-top apc-fade">
     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/top.png">
