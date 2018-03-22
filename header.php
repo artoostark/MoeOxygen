@@ -36,10 +36,18 @@
             <a class="nav-search" href="#"><i class="search link icon"></i></a>
           </div>
         </div>
-        <a class="nav-user ui item">
-          <img class="circular" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/header-img.png"/>
-          <span>光小猫</span>
-        </a>
+        <?php if(is_user_logged_in()): ?>
+            <?php $current_user = wp_get_current_user(); ?>
+            <a class="nav-user ui item">
+              <img class="circular" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/header-img.png"/>
+              <span><?php echo $current_user->display_name ?></span>
+            </a>
+        <?php else: ?>
+            <a class="nav-user ui item">
+              <img class="circular" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/header-img.png"/>
+              <span>登录</span>
+            </a>
+        <?php endif; ?>
       </div>
     </div>
   </div>
