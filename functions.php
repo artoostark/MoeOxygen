@@ -304,6 +304,9 @@ function apc_paginate_links_callback($matches){
 function the_apc_paginate_links($args=array()){
     $args["type"] = "array";
     $links = paginate_links($args);
+    if(!$links){
+        return;
+    }
     $pattern = '/class=(\'|\")(.+?)(\'|\")/i';
     $new_links = array();
     foreach ($links as $link) {

@@ -66,7 +66,7 @@
 		 * @type {Element | null}
 		 * @url http://www.semantic-ui.cn/modules/dimmer.html#/settings
 		 */
-		var s = doc.querySelector(".site-comments .login");
+		var s = doc.querySelector(".site-comments .login.rich");
 		try {
 			if (s !== null && s !== undefined) {
 				s.addEventListener("click", function () {
@@ -257,6 +257,17 @@
 					"transform": "rotate(0)",
 					"-webkit-transform": "rotate(0)"
 				})
+			}
+		});
+		$('.ui.dropdown').dropdown({
+			action:"select",
+			onChange: function(value, text, $choice){
+				var item = text;
+				link = item.data("href");
+				if(link){
+					window.location.href = link;
+				}
+
 			}
 		});
 	});

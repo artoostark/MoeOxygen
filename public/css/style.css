@@ -17,6 +17,16 @@ header .header-nav .ui.container {
 header .ui.menu.header-nav {
   background-color: rgba(0, 0, 0, 0.5);
 }
+header .ui.menu.header-nav .ui.nav-user.dropdown div.menu {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+}
+header .ui.menu.header-nav .ui.nav-user.dropdown div.menu > .item {
+  color: #fff !important;
+}
+header .ui.menu.header-nav .ui.nav-user.dropdown div.menu::after {
+  display: none;
+}
 header .ui.menu.header-nav ul.nav-list-ul {
   display: flex;
   display: -o-flex;
@@ -278,9 +288,6 @@ main .apc-sidebar .site-hot-posts .list .item .right.floated.content {
   margin-left: 0.35714285714285715rem;
   color: #c5c5c5;
 }
-main .apc-main .site-slider {
-  margin-bottom: 0.7142857142857143rem;
-}
 main .apc-main .site-slider.banner {
   width: 100%;
   height: 25.714285714285715rem;
@@ -302,6 +309,7 @@ main .apc-main .site-slider .tb-btn .active {
 main .apc-main .site-index-hot-articles {
   width: 100%;
   margin-bottom: 2.142857142857143rem;
+  margin-top: 1rem;
 }
 main .apc-main .site-index-hot-articles .site-index-hot-articles-header.mobile {
   display: none;
@@ -455,7 +463,6 @@ main .apc-main .leaderboard.ad {
 }
 main .apc-main .site-index-hot-articles .breadcrumb {
   margin-bottom: 1rem;
-  margin-top: 1rem;
 }
 main .apc-main .site-index-hot-articles .breadcrumb,
 main .apc-main .site-index-hot-articles .breadcrumb a {

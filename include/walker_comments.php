@@ -21,12 +21,6 @@ class Apc_Comments_Walker extends Walker_Comment{
     //     $output .= "</ul><!-- .children -->\n";
     // }
     protected function comment( $comment, $depth, $args ) {
-        // $parent_comment_id = intval($comment->comment_parent);
-        // if($parent_comment_id > 0){
-        //     $parent = get_comment($parent_comment_id);
-        // }else{
-        //     $parent = null;
-        // }
         $parent = null;
 ?>
     <li class="comment">

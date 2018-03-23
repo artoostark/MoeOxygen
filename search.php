@@ -2,11 +2,10 @@
 <main class="ui container two column stackable grid">
   <?php get_sidebar(); ?>
   <div class="apc-main twelve wide column">
-      <?php get_template_part( "part_slide" ); ?>
     <div class="ui site-index-hot-articles">
       <div class="site-index-hot-articles-header">
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAUCAYAAACXtf2DAAAB8klEQVQ4jZXVPWhUQRAH8N87LzGFYqFo/EBBBVELBcE8LYUUaRQtrISYa20sxMYmiIiiYKMpLE4hBkQQKz/QVrkX04lCOhVjjIoWIpoYubPYFzwee5fcNDs7/7fznzezM5vUa0MWkS408DcGJmm17eFSG2w7pvAHvzBYwPdjspFV5htZZbSRVZZ3SnAVG3O9Czeb9qvwEDtQxgkMd0rQX9h340iuH8aaAn6yU4LuiG1tvm6NYL2dEryM2N7m6+cI9rEdwSBGcRYLxbpQ+HYa93P9gVD4ZrkdIyjjDK402Q7gKB4LOT+FHziHn01/cBy3hFrcwXloZJXdOIQsSasTSb02NI31BeI9eBWLqCAJepK0+jt3fgz3sEzonYFSxDnsLDgZEFLwBhmuCX3QaHJewvXc+cK5SyVMRAg+5Os2PMcjoU670IfTGMeTRlbZkH+7KRLs3qReG+rH0ybjOA5iC2pYFwmgWd4jzfVPBWymhGdC44zhopCOOkaW4FweyOUkrc7gRQEbSVoMu95INO1kFiuEFN0QUnkXw+UWBzZ34Bx6sDpJq1P+jxO07uQvHRLM4nsMaEXwTijwUmUsSavR96LdLKrg6xKcvxZGTFTaEUxinzAG5iL4N+HW9SVpNZoeaHWLilLGSqH95zAvf0IXezL/AehJeQFpkZ+QAAAAAElFTkSuQmCC">
-        <span>热门文章</span>
+        <span><?php echo sprintf('搜索: "%1$s"', strip_tags( get_query_var("s") ) ); ?></span>
       </div>
 
         <?php if ( have_posts() ) : ?>
