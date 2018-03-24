@@ -297,12 +297,41 @@ function apc_paginate_links_callback($matches){
     if(mb_strpos($class_text, "current") > -1){
         $class_text .= " disabled";
     }
-    $class_text .= " ui basic button";
+    $class_text .= " ui button";
     return sprintf('class="%1$s"', $class_text);
 }
 
 function the_apc_paginate_links($args=array()){
     $args["type"] = "array";
+    global $wp_rewrite;
+    $page = (get_query_var('paged')) ? get_query_var('paged') : 1;
+    if ( is_singular() ){
+        $post_id = get_the_ID();
+        if(!$post_id){
+            return;
+        }
+        $page = (get_query_var('cpage')) ? get_query_var('cpage') : 1;
+        $comments_query_args = array(
+            "post_id" => $post_id
+        );
+
+        $comments_query = new WP_Comment_Query;
+        $comments = $comments_query->query( $comments_query_args );
+
+        $max_page = get_comment_pages_count($comments);
+        $defaults = array(
+            'base' => add_query_arg( 'cpage', '%#%' ),
+            'total' => $max_page,
+            'current' => $page,
+        );
+        if ( $wp_rewrite->using_permalinks() )
+            $defaults['base'] = user_trailingslashit(trailingslashit(get_permalink()) . $wp_rewrite->comments_pagination_base . '-%#%', 'commentpaged');
+    }else{
+        $defaults = array(
+            'current' => $page,
+        );
+    }
+    $args = wp_parse_args( $args, $defaults );
     $links = paginate_links($args);
     if(!$links){
         return;
@@ -513,4 +542,12 @@ function apc_paginate_comments_links( $post_id, $args = array() ) {
         $new_links[] = $link;
     }
     echo join("\n", $new_links);
+}
+
+function get_the_author_posts_link_href(){
+    global $authordata;
+    if ( ! is_object( $authordata ) ) {
+        return;
+    }
+    echo esc_url( get_author_posts_url( $authordata->ID, $authordata->user_nicename ) );
 }

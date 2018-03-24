@@ -295,6 +295,7 @@ main .apc-main .site-slider.banner {
 main .apc-main .site-slider .tb-list ul {
   list-style: none;
   padding-left: 0;
+  height: 21.6rem;
 }
 main .apc-main .site-slider .tb-arrow a {
   top: 50%;
@@ -535,6 +536,9 @@ main .apc-main .single-nav .ui.card .image {
   background-color: transparent;
   position: relative;
 }
+main .apc-main .single-nav .ui.card .image img {
+  border-radius: 5px;
+}
 main .apc-main .single-nav .ui.card .image button {
   position: absolute;
   top: 1.7857142857142858rem;
@@ -689,6 +693,12 @@ main .apc-main .site-comments .comments .comments-list li .content ul.reple-list
   padding: 1.4285714285714286rem 1.0714285714285714rem;
   margin: 0;
 }
+main .apc-main .site-comments .comments .comments-list li .content a.author {
+  cursor: initial;
+}
+main .apc-main .site-comments .comments .comments-list li .content a.author:hover {
+  color: rgba(0, 0, 0, 0.87);
+}
 .ui.apc-user {
   position: fixed;
   z-index: 1001;
@@ -835,7 +845,7 @@ main .apc-main .site-author-info {
 }
 main .apc-main .site-author-info .site-author-info-image img {
   border-radius: 0.7142857142857143rem;
-  padding-bottom: 1.4285714285714286rem;
+  margin-bottom: 1.4285714285714286rem;
 }
 main.grid .apc-main .site-author-info .site-author-info-more {
   display: flex;
@@ -892,6 +902,9 @@ main .apc-main .site-author-articles .site-more-articles .site-more-articles-lis
   padding: 0.35714285714285715rem;
   background-color: transparent;
 }
+main .apc-main .site-author-articles .site-more-articles .site-more-articles-list ul li .image img {
+  border-radius: 5px;
+}
 main .apc-main .site-author-articles .site-more-articles .site-more-articles-list ul li .content {
   border-top: none;
 }
@@ -925,7 +938,7 @@ main .apc-main .ui .site-page-number {
   margin-top: 2.5rem;
   margin-bottom: 7.142857142857143rem;
 }
-main .apc-main .ui .site-page-number button {
+main .apc-main .ui .site-page-number a {
   margin: 0 0.35714285714285715rem;
   background-color: #fff;
   color: #c5c5c5;
@@ -933,11 +946,11 @@ main .apc-main .ui .site-page-number button {
   font-weight: normal;
   border: 0.07142857142857142rem solid #c5c5c5;
 }
-main .apc-main .ui .site-page-number button:first-child {
+main .apc-main .ui .site-page-number a:first-child {
   border: 0.07142857142857142rem solid #c5c5c5;
 }
-main .apc-main .ui .site-page-number button:hover,
-main .apc-main .ui .site-page-number button:active {
+main .apc-main .ui .site-page-number a:hover,
+main .apc-main .ui .site-page-number a:active {
   background-color: #ffdd76;
   color: #fff;
   border: 0.07142857rem solid #ffdd76;

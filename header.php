@@ -43,7 +43,7 @@
         <?php $current_user = wp_get_current_user(); ?>
         <div class="ui pointing link dropdown nav-user item">
             <?php if(is_user_logged_in()): ?>
-                <img class="ui mini circular image" src="<?php echo get_avatar_url($current_user, array(35,35)); ?>"/>
+                <img class="ui mini circular image" src="<?php echo get_avatar_url($current_user, array("size"=>35)); ?>"/>
                 <span class="text"><?php echo $current_user->display_name ?></span>
             <?php else: ?>
                 <img class="circular" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/header-img.png"/>

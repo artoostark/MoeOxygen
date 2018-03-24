@@ -6,14 +6,14 @@
     <?php if(is_a( $previous_post , 'WP_Post' )): ?>
         <div class="ui card single-nav-left">
             <div class="image">
-              <img src="<?php echo get_the_post_thumbnail_url($previous_post->ID, "next_post_thumbnail") ?>">
-              <button class="ui button single-nav-button-left">
-                <a href="<?php echo the_permalink($previous_post) ?>"><i class="angle left icon"></i>上一篇</a>
-              </button>
+                <img src="<?php echo get_the_post_thumbnail_url($previous_post->ID, "next_post_thumbnail") ?>">
+                <button class="ui button single-nav-button-left">
+                    <a href="<?php echo the_permalink($previous_post); ?>"><i class="angle left icon"></i>上一篇</a>
+                </button>
             </div>
             <div class="content">
               <div class="title">
-                  <a href="<?php echo the_permalink($previous_post) ?>">
+                  <a href="<?php echo the_permalink($previous_post); ?>">
                       <?php echo get_the_title($previous_post); ?>
                   </a>
               </div>
@@ -28,12 +28,12 @@
   <?php if(is_a( $next_post , 'WP_Post' )): ?>
       <div class="ui card single-nav-right">
         <div class="image">
-          <img src="<?php echo get_the_post_thumbnail_url($next_post->ID, "next_post_thumbnil") ?>">
-          <button class="ui button single-nav-button-right">
-            <a href="<?php echo the_permalink($next_post) ?>">
-                下一篇
-            <i class="angle right icon"></i></a>
-          </button>
+            <img src="<?php echo get_the_post_thumbnail_url($next_post->ID, "next_post_thumbnil") ?>">
+            <button class="ui button single-nav-button-right">
+                <a href="<?php echo the_permalink($next_post) ?>">
+                    下一篇
+                <i class="angle right icon"></i></a>
+            </button>
         </div>
         <div class="content">
           <div class="title">

@@ -10,9 +10,12 @@
 
   <article class="article">
     <h2><?php the_title() ?></h2>
-    <div class="article-info"><a><?php the_time("Y-m-d") ?></a> <a class="cut">|</a> <a href="#"><?php the_author() ?></a></div>
-    <div class="ui leaderboard ad mobile hide">
-      <a href="#" target="_blank" rel="nofollow"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/site-header-mobile-ad.png"></a>
+    <div class="article-info">
+        <a><?php the_time("Y-m-d") ?></a>
+        <a class="cut">|</a>
+        <a href="<?php get_the_author_posts_link_href(); ?>">
+            <?php the_author() ?>
+        </a>
     </div>
     <div class="post-img">
       <img class="full" src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>">

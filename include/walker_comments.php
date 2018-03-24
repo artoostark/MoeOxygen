@@ -26,13 +26,13 @@ class Apc_Comments_Walker extends Walker_Comment{
     <li class="comment">
         <a class="avatar">
             <?php if ( 0 != $args['avatar_size'] ) : ?>
-                <img src="<?php echo get_avatar_url($comment, $args['avatar_size']); ?>">
+                <img src="<?php echo get_avatar_url($comment, array("size" => $args['avatar_size'])); ?>">
             <?php else: ?>
-                <img src="<?php echo get_avatar_url($comment, array(35, 35)); ?>">
+                <img src="<?php echo get_avatar_url($comment, array("size" => 35)); ?>">
             <?php endif; ?>
         </a>
         <div class="content">
-          <a class="author" href="javascript:;">
+          <a class="author">
               <?php echo get_comment_author($comment); ?>
           </a>
           <div class="metadata">

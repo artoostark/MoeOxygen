@@ -44,19 +44,9 @@
                 "page" => get_query_var('cpage'),
                 "walker" => new Apc_Comments_Walker(),
                 "max_depth" => 2,
-                "avatar_size" => array(35, 35)
+                "avatar_size" => 35
             ));
         ?>
     </ul>
   </div>
-  <div class="ui buttons site-page-number">
-      <?php
-        apc_paginate_comments_links(
-            get_the_ID(),
-            array(
-                "next_text" => "下一页",
-                "prev_text" => "上一页"
-            )
-        );
-      ?>
-</div>
+  <?php get_template_part("util_paginator"); ?>
