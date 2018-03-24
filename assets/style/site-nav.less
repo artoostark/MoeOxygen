@@ -1,0 +1,96 @@
+@charset "UTF-8";
+//引入初始化样式
+@import (reference) "apc.less";
+
+//站点导航栏
+main .apc-sidebar .site-nav .site-nav-ul {
+  position: relative;
+  width: 15.714285714285714rem;
+  height: auto;
+  list-style: none;
+  background-color: @main-color;
+  padding-left: 0;
+}
+
+main .apc-sidebar .site-nav .site-nav-ul li {
+  height: 3.142857142857143rem;
+  line-height: 3.142857142857143rem;
+  text-align: left;
+}
+
+main .apc-sidebar .site-nav .site-nav-ul li a {
+  display: block;
+  color: @nav-font-color;
+  text-decoration: none;
+  padding-left: 2.142857142857143rem;
+}
+
+main .apc-sidebar .site-nav .site-nav-ul li a span.quantity {
+  background-color: #ff0000;
+  color: #fff;
+  font-size: 0.8571428571428571rem;
+  padding: 0.5px 5px;
+  border-radius: 50px;
+  position: relative;
+  bottom: 8px;
+  line-height: 10px;
+}
+
+main .apc-sidebar .site-nav .site-nav-ul  li.liname a {
+  background: @main-hover-color;
+}
+
+main .apc-sidebar .site-nav .site-nav-ul li a:hover {
+  display: block;
+  background: @main-hover-color;
+  color: #fff;
+  text-decoration: none;
+}
+
+main .apc-sidebar .site-nav .site-nav-ul li .icon-right {
+  position: absolute;
+  right: 1rem;
+}
+
+main .apc-sidebar .site-nav .site-nav-ul li .icon-right i {
+  color: @nav-font-color;
+}
+
+main .apc-sidebar .site-nav .site-nav-ul li:hover .icon-right i {
+  color: #fff;
+}
+
+main .apc-sidebar .site-nav .site-nav-ul li .site-nav-list,
+main .apc-sidebar .site-nav .site-nav-ul li .sub-menu,
+{
+  display: none;
+  width: 15.714285714285714rem;
+  height: auto;
+  //position: absolute;
+  top: 0;
+  background: @main-hover-color;
+  color: @nav-font-color;
+  z-index: 1;
+  margin-left: 1.4285714285714286rem;
+  position: relative;
+}
+
+main .apc-sidebar .site-nav .site-nav-ul .liname .site-nav-list,
+main .apc-sidebar .site-nav .site-nav-ul .liname .sub-menu {
+  display: block;
+}
+
+main .apc-sidebar .site-nav .site-nav-ul li .site-nav-list,
+main .apc-sidebar .site-nav .site-nav-ul .liname .site-nav-list,
+main .apc-sidebar .site-nav .site-nav-ul li .sub-menu,
+main .apc-sidebar .site-nav .site-nav-ul .liname .sub-menu
+{
+  margin: 0;
+}
+
+main .apc-sidebar .site-nav .site-nav-ul li .site-nav-list li a,
+main .apc-sidebar .site-nav .site-nav-ul .liname .site-nav-list li a,
+main .apc-sidebar .site-nav .site-nav-ul li .sub-menu li a,
+main .apc-sidebar .site-nav .site-nav-ul .liname .sub-menu li a {
+  padding-left: 0;
+}

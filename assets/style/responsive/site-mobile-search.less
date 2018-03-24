@@ -1,0 +1,104 @@
+@charset "UTF-8";
+//引入初始化样式
+@import "../apc.less";
+
+/*-------------------
+   响应式 - 移动端搜索
+--------------------*/
+
+/*模态宽度 - 移动端(小于767分辨率)*/
+@media only screen and (max-width: 767px) {
+
+  .ui.container.apc-mobile-search {
+    width: 100%;
+    position: fixed;
+    z-index: 1001;
+    top: 1rem;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    margin-left: 0!important;
+    margin-right: 0!important;
+    height: 100%;
+    display: none;
+    overflow: hidden;
+  }
+
+  .ui.grid.apc-mobile-search > .column:not(.row) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .apc-mobile-search .column .ui.search {
+    padding-bottom: 1rem;
+    border-bottom: 0.07142857142857142rem solid #e6e6e6;
+  }
+
+  .apc-mobile-search .column .ui.search .ui.icon.input {
+    width: 80%;
+  }
+
+  .apc-mobile-search .column .ui.search .ui.icon.input #search-input {
+    padding-left: 2.3rem;
+  }
+
+  .apc-mobile-search .column .ui.search .ui.icon.input #mobile-search {
+    background-color: transparent;
+    padding: 0.78571429em 1em 0.78571429em;
+    position: absolute;
+    left: 0;
+  }
+
+  .apc-mobile-search .column .ui.search .ui.icon.input #mobile-search i {
+    text-align: right;
+  }
+
+  .apc-mobile-search .column .ui.search button.back {
+    background-color: transparent;
+    padding: 0.78571429em 1em 0.78571429em 0.5em;
+  }
+
+  .apc-mobile-search .column .history-info {
+    font-size: @two-font-size;
+    text-align: left;
+    color: #999;
+    padding: @three-font-size/2 1rem;
+    border-bottom: 0.07142857142857142rem solid #e6e6e6;
+  }
+
+  .apc-mobile-search .search-delete.search-history .word-break {
+    text-align: left;
+    padding: @three-font-size/2 1rem;
+    border-bottom: 0.07142857142857142rem solid #e6e6e6;
+  }
+
+  .apc-mobile-search .search-delete.search-history .word-break a {
+    font-size: @two-font-size;
+    color: #333;
+  }
+}
+
+/*模态宽度 - 平板电脑(大于767分辨率)*/
+@media only screen and (min-width: 768px) {
+
+}
+
+/*模态宽度 - 小型显示器(大于992分辨率)*/
+@media only screen and (min-width: 992px) {
+
+}
+
+/*模态宽度 - 大型显示器(大于1200分辨率)*/
+@media only screen and (min-width: 1200px) {
+
+}
+
+/*模态宽度 - 超级大型显示器(大于1920分辨率)*/
+@media only screen and (min-width: 1920px) {
+
+}
+
+/*模态宽度 - 小型显示器(小于991分辨率)*/
+@media only screen and (max-width: 991px) {
+
+}

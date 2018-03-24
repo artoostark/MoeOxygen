@@ -1,0 +1,123 @@
+@charset "UTF-8";
+//引入初始化样式
+@import (reference) "apc.less";
+
+main .apc-main .site-author-info {
+  margin-top: 4.285714285714286rem;
+  border-bottom: 0.14285714rem #c5c5c5 dashed;
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+main .apc-main .site-author-info .site-author-info-image img {
+  border-radius: 0.7142857142857143rem;
+  margin-bottom: 1.4285714285714286rem;
+}
+
+main.grid .apc-main .site-author-info .site-author-info-more {
+  display: flex;
+  display: -o-flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  justify-self: center;
+  padding: 1.4285714285714286rem 0 1.4285714285714286rem 1.7857142857142858rem;
+}
+
+main .apc-main .site-author-info .site-author-info-more .name {
+  font-size: @one-font-size;
+  color: #000;
+  width: 100%;
+}
+
+main .apc-main .site-author-info .site-author-info-more .introduction {
+  font-size: @three-font-size;
+  color: #c5c5c5;
+  width: 100%;
+}
+
+main .apc-main .site-author-info .site-author-info-more .post,
+main .apc-main .site-author-info .site-author-info-more .likes {
+  font-size: @three-font-size;
+  color: #666;
+  width: 25%;
+  float: left;
+}
+
+main .apc-main .site-author-info .site-author-info-more .post span,
+main .apc-main .site-author-info .site-author-info-more .likes span {
+  font-size: @one-font-size;
+}
+
+main .apc-main .site-author-info .site-author-info-more button.attention {
+  background-color: @main-color;
+  color: #5f3c00;
+  width: 50%;
+  padding: 0 1.5em;
+}
+
+main .apc-main .site-author-info .site-author-info-more button.attention:hover,
+main .apc-main .site-author-info .site-author-info-more button.attention:active{
+  background-color: #fec761;
+  color: #5f3c00;
+}
+
+main .apc-main .site-author-articles {
+  margin-top: 2.142857142857143rem;
+  margin-bottom: 2.142857142857143rem;
+}
+
+main .apc-main .site-author-articles .site-more-articles .site-more-articles-list ul li {
+  padding-bottom: 0;
+  border-bottom: none;
+  margin-top: 0;
+}
+
+main .apc-main .site-author-articles .site-more-articles .site-more-articles-list ul li .image {
+  padding: 0.35714285714285715rem;
+  background-color: transparent;
+}
+
+main .apc-main .site-author-articles .site-more-articles .site-more-articles-list ul li .image img{
+    border-radius: 5px;
+}
+
+main .apc-main .site-author-articles .site-more-articles .site-more-articles-list ul li .content {
+  border-top: none;
+}
+
+main .apc-main .site-author-articles .site-more-articles .site-more-articles-list ul li .content .title {
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+main .apc-main .site-author-articles .site-more-articles .site-more-articles-list ul li .content .title a {
+  color: #525252;
+  font-size: @two-font-size;
+}
+
+main .apc-main .site-author-articles .site-more-articles .site-more-articles-list ul li .content .time {
+  color: #c5c5c5;
+  font-size: @main-font-size;
+}
+
+main .apc-main .site-author-articles .site-more-articles .site-more-articles-list ul li .content .description {
+  display: -webkit-box;
+  display: -moz-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  margin-top: 0.8571428571428571rem;
+}
+
+main .apc-main .site-author-articles .site-more-articles .site-more-articles-list ul li .content .description a {
+  color: #c5c5c5;
+  font-size: @main-font-size;
+}

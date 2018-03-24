@@ -1,0 +1,226 @@
+@charset "UTF-8";
+//引入初始化样式
+@import "../apc.less";
+
+/*-------------------
+   响应式 - 头部
+--------------------*/
+
+/*模态宽度 - 移动端(小于767分辨率)*/
+@media only screen and (max-width: 767px) {
+  header {
+    margin-bottom: 1rem;
+    padding-bottom: 6.428571428571429rem;
+  }
+
+  header .ui.menu.header-nav {
+    background-color: transparent;
+  }
+
+  header .ui.menu.header-nav ul.nav-list-ul {
+    display: flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    padding-left: 0;
+    margin-top: 1rem;
+  }
+
+  header .ui.menu.header-nav ul.nav-list-ul .nav-list {
+    height: 2.5rem;
+    top: 3rem;
+  }
+
+  header .ui.menu.header-nav ul.nav-list-ul .nav-list a.item {
+    padding: 0;
+    margin: 0;
+    line-height: 2.3rem;
+    width: 4.642857142857143rem;
+    justify-content: center;
+  }
+
+  header .ui.menu.header-nav ul.nav-list-ul .nav-list a.item:hover {
+    text-align: center;
+    height: auto;
+    background-color: transparent;
+    color: @main-color;
+    border-bottom: 0.21428571428571427rem solid @main-color;
+    -moz-border-radius-bottomleft: 0;
+    -moz-border-radius-bottomright: 0;
+    border-bottom-right-radius: 0!important;
+    border-bottom-left-radius: 0!important;
+    line-height: 2.3rem;
+  }
+
+  header .ui.menu.header-nav .right.menu {
+    position: absolute;
+    right: 0;
+  }
+
+  header .header-content {
+    height: 6.5rem;
+    background-color: #1f1f1f;
+    position: fixed;
+    z-index: 1;
+  }
+
+  header .header-bg-img {
+    background-image: none;
+  }
+
+  header .header-content .header-logo .nav-logo {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    z-index: 999;
+  }
+
+  header .header-content .header-logo .nav-logo img {
+    max-width: 7.5rem;
+    width: 100%;
+  }
+
+  header .ui.menu.header-nav .nav-search {
+    margin-right: 0;
+    padding: .78571429em 0
+  }
+
+  header .ui.menu.header-nav .nav-search .ui.icon.input {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  header .ui.menu.header-nav .nav-search .input .input-search {
+    display: none;
+  }
+
+  header .ui.menu.header-nav .nav-search .input a.nav-search {
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    padding: 0;
+  }
+
+  header .ui.menu.header-nav .nav-search .input a.nav-search i.search {
+    width: 2rem;
+    height: 2rem;
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: #fff;
+    opacity: 1;
+  }
+
+  header .ui.menu.header-nav .nav-user span {
+    margin-left: 1rem;
+  }
+
+  header div.ui.button.accordion.nav-more-arrow {
+    position: fixed;
+    background-color: transparent;
+    display: block;
+    height: 2.5rem;
+    top: 3.5rem;
+    padding: 0;
+    width: 100%;
+    z-index: 2;
+  }
+
+  header div.ui.button.accordion.nav-more-arrow .title {
+    height: 2.5rem;
+  }
+
+  header div.ui.button.accordion.nav-more-arrow i {
+    position: fixed;
+    right: 0;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    color: #fff;
+    transition: 500ms;
+  }
+
+  header div.ui.button.accordion.nav-more-arrow .content {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);;
+  }
+
+  header div.ui.button.accordion.nav-more-arrow .content ul.site-nav-ul-mobile {
+    width: 100%;
+    display: flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -moz-flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: @main-font-size;
+  }
+
+  header div.ui.button.accordion.nav-more-arrow .content ul.site-nav-ul-mobile li {
+    padding: 0;
+    margin: 0 auto;
+    line-height: 2.3rem;
+    width: 25%;
+    justify-content: center;
+  }
+
+  header div.ui.button.accordion.nav-more-arrow .content ul.site-nav-ul-mobile li a {
+    font-size: @main-font-size;
+    color: #fff;
+  }
+
+  header div.ui.button.accordion.nav-more-arrow .content ul.site-nav-ul-mobile li a i {
+    position: relative;
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: bold;
+  }
+
+  header div.ui.button.accordion.nav-more-arrow .content ul.site-nav-ul-mobile li ul.site-nav-list {
+    background-color: transparent;
+    padding-left: 0;
+  }
+
+  header div.ui.button.accordion.nav-more-arrow .content ul.site-nav-ul-mobile li ul.site-nav-list li {
+    width: 100%;
+  }
+
+  header div.ui.button.accordion.nav-more-arrow .content ul.site-nav-ul-mobile li ul.site-nav-list li a {
+    color: #fff;
+  }
+
+}
+
+/*模态宽度 - 平板电脑(大于767分辨率)*/
+@media only screen and (min-width: 768px) {
+  header .ui.menu.header-nav ul.nav-list-ul .nav-list .item {
+    padding: 0.78571429em 0.35714285714285715rem;
+  }
+
+  header .ui.menu.header-nav .nav-search {
+    margin-right: 0;
+  }
+}
+
+/*模态宽度 - 小型显示器(大于992分辨率)*/
+@media only screen and (min-width: 992px) {
+
+}
+
+/*模态宽度 - 大型显示器(大于1200分辨率)*/
+@media only screen and (min-width: 1200px) {
+
+}
+
+/*模态宽度 - 超级大型显示器(大于1920分辨率)*/
+@media only screen and (min-width: 1920px) {
+
+}
+
+/*模态宽度 - 小型显示器(小于991分辨率)*/
+@media only screen and (max-width: 991px) {
+
+}

@@ -1,0 +1,67 @@
+@charset "UTF-8";
+//引入初始化样式
+@import "../apc.less";
+
+/*-------------------
+   响应式 - 文章导航
+--------------------*/
+
+/*模态宽度 - 移动端(小于767分辨率)*/
+@media only screen and (max-width: 767px) {
+  main .apc-main .single-nav .ui.card .image {
+    height: 42%;
+  }
+
+  main .apc-main .single-nav .ui.card .image img {
+    height: 100%;
+  }
+
+  main .apc-main .single-nav .ui.card .image button {
+    padding: 0.5em 1em 0.5em;
+    top: 0.8571428571428571rem
+  }
+
+  main .apc-main .single-nav .ui.card .image button a {
+    font-size: 0.8571428571428571rem;
+  }
+
+  main .apc-main .single-nav .ui.card .content {
+
+  }
+
+  main .apc-main .single-nav .ui.card .content .description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+  }
+}
+
+/*模态宽度 - 平板电脑(大于767分辨率)*/
+@media only screen and (min-width: 768px) {
+  main .apc-main .single-nav .ui.card .image button {
+    top: 0.8571428571428571rem
+  }
+}
+
+/*模态宽度 - 小型显示器(大于992分辨率)*/
+@media only screen and (min-width: 992px) {
+
+}
+
+/*模态宽度 - 大型显示器(大于1200分辨率)*/
+@media only screen and (min-width: 1200px) {
+
+}
+
+/*模态宽度 - 超级大型显示器(大于1920分辨率)*/
+@media only screen and (min-width: 1920px) {
+
+}
+
+/*模态宽度 - 小型显示器(小于991分辨率)*/
+@media only screen and (max-width: 991px) {
+
+}

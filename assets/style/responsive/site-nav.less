@@ -1,0 +1,66 @@
+@charset "UTF-8";
+//引入初始化样式
+@import "../apc.less";
+
+/*-------------------
+   响应式 - 侧边栏导航
+--------------------*/
+
+/*模态宽度 - 移动端(小于767分辨率)*/
+@media only screen and (max-width: 767px) {
+
+}
+
+/*模态宽度 - 平板电脑(大于767分辨率)*/
+@media only screen and (min-width: 768px) {
+  main .apc-sidebar .site-nav .site-nav-ul {
+    width: 100%;
+  }
+
+  main .apc-sidebar .site-nav .site-nav-ul li .site-nav-list,
+  main .apc-sidebar .site-nav .site-nav-ul li .submenu {
+    width: 100%;
+    left: 159px;
+  }
+
+  main .apc-sidebar .site-ad .ui[class*="medium rectangle"].ad,
+  main .apc-sidebar .site-ad .rectangle.ad img {
+    width: 100%;
+    height: 100%;
+  }
+
+  main .apc-sidebar .site-label {
+    width: 100%;
+  }
+
+  main .apc-sidebar .site-hot-posts {
+    width: 100%;
+  }
+}
+
+/*模态宽度 - 小型显示器(大于992分辨率)*/
+@media only screen and (min-width: 992px) {
+  main .apc-sidebar .site-nav .site-nav-ul li .site-nav-list,
+  main .apc-sidebar .site-nav .site-nav-ul li .submenu {
+    left: 212px;
+  }
+}
+
+/*模态宽度 - 大型显示器(大于1200分辨率)*/
+@media only screen and (min-width: 1200px) {
+  main .apc-sidebar .site-nav .site-nav-ul li .site-nav-list,
+  main .apc-sidebar .site-nav .site-nav-ul li .sub-menu {
+    width: 100%;
+    left: 260px;
+  }
+}
+
+/*模态宽度 - 超级大型显示器(大于1920分辨率)*/
+@media only screen and (min-width: 1920px) {
+
+}
+
+/*模态宽度 - 小型显示器(小于991分辨率)*/
+@media only screen and (max-width: 991px) {
+
+}
